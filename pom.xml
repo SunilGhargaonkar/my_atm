@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>demo.poc</groupId>
+    <artifactId>my-atm</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>my-atm-core</module>
+        <module>my-atm-api</module>
+        <module>my-atm-server</module>
+    </modules>
+
+    <properties>
+        <junit.version>5.7.0</junit.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <opencsv>5.5.2</opencsv>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Project dependencies-->
+            <dependency>
+                <groupId>demo.poc</groupId>
+                <artifactId>my-atm-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>demo.poc</groupId>
+                <artifactId>my-atm-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>demo.poc</groupId>
+                <artifactId>my-atm-server</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!--  CSV Parser  -->
+            <dependency>
+                <groupId>com.opencsv</groupId>
+                <artifactId>opencsv</artifactId>
+                <version>4.6</version>
+            </dependency>
+            <!--  Test Dependency  -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
