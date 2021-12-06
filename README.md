@@ -14,3 +14,5 @@ Run ATM main method to execute the program
 ```
 
 
+
+![atm-scenario-demo](https://user-images.githubusercontent.com/9819702/144932522-71786dda-61d7-4862-9629-b1651ff5cdcf.gif)
